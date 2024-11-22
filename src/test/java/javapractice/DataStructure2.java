@@ -46,14 +46,14 @@ public class DataStructure2 {
         System.out.println("평균" + average);
 
 
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         for (Integer s : score) {
             if (max < s) {
                 max = s;
             }
         }System.out.println("Max" + max);
 
-        int min = 100;
+        int min = Integer.MAX_VALUE;
         for (Integer s : score){
             if(min > s){
                 min = s;
@@ -61,9 +61,24 @@ public class DataStructure2 {
         }
         System.out.println("Min" + min);
 
+        ArrayList<Integer> upperAverage = new ArrayList<>();
+        for(Integer s : score){
+            if(average < s){
+                upperAverage.add(s);
+            }
+        }
+        System.out.println("upperAverage" + upperAverage);
+
+        ArrayList<Integer> underAverage = new ArrayList<>();
+        for(Integer s : score){
+            if(average < s){
+                underAverage.add(s);
+            }
+        }
+        System.out.println("underAverage" + underAverage);
 
     }
-
+        //Collections.sort(), ArrayList오브젝트sort() 함수는 원본의 정렬까지 바꿔버린다.
 
 
 
